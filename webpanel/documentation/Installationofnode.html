@@ -1,0 +1,146 @@
+﻿<html>
+
+    <head>
+        <title>Installation of node</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="generator" content="HelpNDoc Personal Edition 4.3.1.364">
+
+        <link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+        <!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+        <style type="text/css">
+            #topic_header
+            {
+                background-color: #EFEFEF;
+            }
+        </style>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/hnd.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function()
+            {
+                if(top.frames.length == 0)
+                {
+                    var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+                    top.location.href = "index.html?" + sTopicUrl;
+                }
+                else if(top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+                {
+                    top.FrameTOC.SelectTocItem("Installationofnode");
+                }
+            });
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id="topic_header">
+            <div id="topic_header_content">
+                <h1 id="topic_header_text">Installation of node</h1>
+
+                <div id="topic_breadcrumb">
+                    <a href="GettingStarted.html">Getting Started</a> &rsaquo;&rsaquo; </div>
+            </div>
+            <div id="topic_header_nav">
+                <a href="GettingStarted.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+
+                <a href="Installationofwebpanel.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+
+                <a href="FAQ.html"><img src="img/arrow_right.png" alt="Next"/></a>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="topic_content">
+
+            <p></p>
+            <p class="rvps3"><span class="rvts17">LINUX:</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps3"><span class="rvts8">Install the necessary components:</span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">apt-get install mono-complete git git-core unzip</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps3"><span class="rvts8">Then install ffmpeg:</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Get the latest static build from (http://ffmpeg.gusari.org/static/) and put the files in folder /usr/local/bin/</span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Also make sure that the executable flags are set for these files. If needed do this manualy </span></p>
+            <p class="rvps7"><span class="rvts16"><br/></span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">cd \usr\local\bin</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">chmod +x ffmpeg</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">chmod +x ffprobe</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Tip: Try running ffmpeg from the commandline without any parameters, Just to verify that the application is able to run propperly. The application should give some visible output to the console, like version number etc.</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps3"><span class="rvts8">Step-1</span></p>
+            <p class="rvps3"><span class="rvts8">------</span></p>
+            <p class="rvps3"><span class="rvts8">If this node is on the same machine as the web panel, you already downloaded</span></p>
+            <p class="rvps3"><span class="rvts8">GNURender and you can skip to step 2.</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps3"><span class="rvts8">Get the latest version of GNURender:</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">cd /opt</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">git clone https://github.com/defcon8/GNURender</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+            <p class="rvps3"><span class="rvts8">Step-2</span></p>
+            <p class="rvps3"><span class="rvts8">------</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp;</span></p>
+            <p class="rvps3"><span class="rvts8">Copy the file 'config.ini.dist' to 'config.ini' and modify it to your needs. The</span></p>
+            <p class="rvps3"><span class="rvts8">file is self explaining (we think). It holds the database connection parameters and</span></p>
+            <p class="rvps3"><span class="rvts8">optionally the path to the blender application executable. An empty line or a line </span></p>
+            <p class="rvps3"><span class="rvts8">starting with # is a commented line and skipped while reading the configuration. The file</span></p>
+            <p class="rvps3"><span class="rvts8">should look something like this:</span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp;</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"># </span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">A unique node name. </span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">nodeid=My Test Node</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"># Path and name of the Blender executable. The Path needs to end with a slash or backslash,</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"># depending on the type of OS. If the path parameter is commented, the node assumes the</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"># path to Blender is in the system environment PATH variable.</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"># </span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"># (Windows example)</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"># appdir=C:\Program Files (x86)\Blender\</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"># appexec=Blender.exe</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"># </span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"># (Linux example)</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"># appdir=/opt/blender/</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"># appexec=blender</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">appdir=/opt/blender/</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">appexec=blender</span></p>
+            <p class="rvps7"><span class="rvts16"><br/></span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">#</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">MySQL database connection parameters</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">mysqlhost=10.1.1.191</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">mysqlport=3306</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">mysqldb=test</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">mysqluser=test</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">mysqlpass=test</span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp;</span></p>
+            <p class="rvps3"><span class="rvts8">During the start-up of process node.exe, it will search for config.ini in it's start-up</span></p>
+            <p class="rvps3"><span class="rvts8">directory. You can now start your node:</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">mono node.exe</span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+            <p class="rvps3"><span class="rvts8">The node is just an application that runs on a console. When you do this remotely through</span></p>
+            <p class="rvps3"><span class="rvts8">a SSH connection, the process is terminated when you close the SSH connection.</span></p>
+            <p class="rvps3"><span class="rvts8">A simple work-a-round is making use of an application named 'screen' which is a simple</span></p>
+            <p class="rvps3"><span class="rvts8">wrapper that will continue running your process when the SSH session ends.</span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+            <p class="rvps3"><span class="rvts8">That's it! </span></p>
+            <p></p>
+            <p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com/feature-tour">Easily create Help documents</a></p>
+        </div>
+
+        <div id="topic_footer">
+
+            <div id="topic_footer_content">
+                Copyright &copy; 2014&reg;  by GNURender. All Rights Reserved.</div>
+        </div>
+    </body>
+
+</html>
+

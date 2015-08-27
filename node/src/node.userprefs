@@ -1,0 +1,17 @@
+﻿<Properties GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="node\Properties\AssemblyInfo.cs">
+    <Files>
+      <File FileName="node\config.ini" Line="4" Column="17" />
+      <File FileName="c:\Users\Bastiaan\Documents\GitHub\GNURender\node\src\node\Main.cs" Line="190" Column="71" />
+      <File FileName="node\Database.cs" Line="156" Column="17" />
+      <File FileName="node\Config.cs" Line="152" Column="1" />
+      <File FileName="node\Archive.cs" Line="1" Column="1" />
+      <File FileName="node\Properties\AssemblyInfo.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

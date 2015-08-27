@@ -1,0 +1,2 @@
+#!/bin/bash
+gmcs Main.cs Archive.cs Database.cs Config.cs -r:System.Data.dll -r:/usr/lib/mono/gac/MySql.Data/6.7.4.0__c5687fc88969c44d/mysql.data.dll -out:../node.exe

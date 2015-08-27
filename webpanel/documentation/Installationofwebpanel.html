@@ -1,0 +1,177 @@
+﻿<html>
+
+    <head>
+        <title>Installation of webpanel</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="generator" content="HelpNDoc Personal Edition 4.3.1.364">
+
+        <link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+        <!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+        <style type="text/css">
+            #topic_header
+            {
+                background-color: #EFEFEF;
+            }
+        </style>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/hnd.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function()
+            {
+                if(top.frames.length == 0)
+                {
+                    var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+                    top.location.href = "index.html?" + sTopicUrl;
+                }
+                else if(top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+                {
+                    top.FrameTOC.SelectTocItem("Installationofwebpanel");
+                }
+            });
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id="topic_header">
+            <div id="topic_header_content">
+                <h1 id="topic_header_text">Installation of webpanel</h1>
+
+                <div id="topic_breadcrumb">
+                    <a href="GettingStarted.html">Getting Started</a> &rsaquo;&rsaquo; </div>
+            </div>
+            <div id="topic_header_nav">
+                <a href="GettingStarted.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+
+                <a href="Systemrequirements.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+
+                <a href="Installationofnode.html"><img src="img/arrow_right.png" alt="Next"/></a>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="topic_content">
+
+            <p></p>
+            <p class="rvps3"><span class="rvts8">The binary repository for GNURender is hosted at GITHUB. The whole install system is</span></p>
+            <p class="rvps3"><span class="rvts8">optimised to work with GIT for Linux. We suggest you use this tool to install GNURender,</span></p>
+            <p class="rvps3"><span class="rvts8">and keep the directory structure the way we designed it. This makes it easy for you to</span></p>
+            <p class="rvps3"><span class="rvts8">update in the future.</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps3"><span class="rvts8">Install the necessary components:</span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">apt-get install git git-core</span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+            <p class="rvps3"><span class="rvts8">Get the latest version of GNURender:</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">cd /opt</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">git clone https://github.com/defcon8/GNURender</span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+            <p class="rvps3"><span class="rvts8">Now you'll need to create a virtual host entry in your Apache2 configuration. Edit</span></p>
+            <p class="rvps3"><span class="rvts8">the file: /etc/apache2/sites-enabled/@000-default and add an entry as shown below:</span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">&lt;VirtualHost *:80&gt;</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;ServerAdmin webmaster@mydomain.com</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;ServerName mydomain.com</span></p>
+            <p class="rvps7"><span class="rvts16"><br/></span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;DocumentRoot /opt/GNURender/webpanel</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;Directory /&gt;</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Options FollowSymLinks</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;AllowOverride None</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/Directory&gt;</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;Directory /opt/GNURender/webpanel&gt;</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Options Indexes FollowSymLinks MultiViews</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;AllowOverride None</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Order allow,deny</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;allow from all</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/Directory&gt;</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;Directory "/usr/lib/cgi-bin"&gt;</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;AllowOverride None</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Order allow,deny</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Allow from all</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/Directory&gt;</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;ErrorLog ${APACHE_LOG_DIR}/error.log</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;LogLevel warn</span></p>
+            <p class="rvps7"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;CustomLog ${APACHE_LOG_DIR}/access.log combined</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">&lt;/VirtualHost&gt;</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps3"><span class="rvts8">For more information on virtual hosts please read the manual of Apache2. </span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps3"><span class="rvts8">Because both the web- and database server needs to handle big (let's say: more than average) sized</span></p>
+            <p class="rvps3"><span class="rvts8">files, you'll need to tune some parameters in your PHP and MySQL configuration files. While these settings</span></p>
+            <p class="rvps3"><span class="rvts8">increase the usability of GNURender, they may be not so optimal for other websites. That's why we always</span></p>
+            <p class="rvps3"><span class="rvts8">suggest you use a dedicated web server instance for GNURender.</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps3"><span class="rvts8">Edit (or if needed add) the following parameters</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">php.ini (located in /etc/php5/apache2/)</span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">=======================================</span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">post_max_size = 1024M</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">memory_limit = 1024M</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">file_uploads = On</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">upload_max_filesize = 1024M</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">max_file_uploads = 20</span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">my.cnf (located in /etc/mysqld)</span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">===============================</span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">[mysqld]</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">max_allowed_packet = 1024M</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">#bind-address = 127.0.0.1</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">[mysqldump]</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">max_allowed_packet = 1024M</span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+            <p class="rvps3"><span class="rvts8">After changing these parameters you'll need to reboot the packages:</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">cd /etc/init.d</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">apache2 restart</span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">mysqld restart</span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+            <p class="rvps3"><span class="rvts8">Now there is just one last thing you'll need to do. Under the webpanel's folder there</span></p>
+            <p class="rvps3"><span class="rvts8">is a file called cron.php. This script is executing administrative tasks for the</span></p>
+            <p class="rvps3"><span class="rvts8">GUI in the background. The script needs to be executed periodically. On Linux we</span></p>
+            <p class="rvps3"><span class="rvts8">can use the crontable, Windows users can use the Windows Task Scheduler for this.</span></p>
+            <p class="rvps3"><span class="rvts8">The task should be executed every 15 minutes. We find a interval of 15 minutes</span></p>
+            <p class="rvps3"><span class="rvts8">to work just fine, you can decrease the interval to have more real-time statistics,</span></p>
+            <p class="rvps3"><span class="rvts8">but this generates more load on your database server.</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps3"><span class="rvts8">Edit the crontab by typing:</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">crontab -e</span></p>
+            <p class="rvps7"><span class="rvts16"><br/></span></p>
+            <p class="rvps3"><span class="rvts8">And add a row:</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">15 &nbsp; &nbsp; &nbsp;* &nbsp; &nbsp; &nbsp; * &nbsp; &nbsp; &nbsp; * &nbsp; &nbsp; &nbsp; * &nbsp; &nbsp; &nbsp; php /opt/GNURender/webpanel/cron.php</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps3"><span class="rvts8">Make sure the path to the cron.php file is correct. After that press F2 (standard</span></p>
+            <p class="rvps3"><span class="rvts8">pico/nano command for saving the file).</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps3"><span class="rvts8">That's it! You should now point your web browser to:</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps7"><span class="rvts16"></span><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">http://yourserver/install</span></p>
+            <p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+            <p class="rvps3"><span class="rvts8">This will launch the web based database configure program that will guide you through the</span></p>
+            <p class="rvps3"><span class="rvts8">final steps of the installation. Do not forget to remove the install directory when</span></p>
+            <p class="rvps3"><span class="rvts8">the installation is finished.</span></p>
+            <p></p>
+            <p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com/help-authoring-tool">Create HTML Help, DOC, PDF and print manuals from 1 single source</a></p>
+        </div>
+
+        <div id="topic_footer">
+
+            <div id="topic_footer_content">
+                Copyright &copy; 2014&reg;  by GNURender. All Rights Reserved.</div>
+        </div>
+    </body>
+
+</html>
+

@@ -1,0 +1,99 @@
+﻿<html>
+
+    <head>
+        <title>System requirements</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="generator" content="HelpNDoc Personal Edition 4.3.1.364">
+
+        <link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+        <!--[if lte IE 8]>
+                <link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+        <![endif]-->
+        <style type="text/css">
+            #topic_header
+            {
+                background-color: #EFEFEF;
+            }
+        </style>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/hnd.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function()
+            {
+                if(top.frames.length == 0)
+                {
+                    var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+                    top.location.href = "index.html?" + sTopicUrl;
+                }
+                else if(top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+                {
+                    top.FrameTOC.SelectTocItem("Systemrequirements");
+                }
+            });
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id="topic_header">
+            <div id="topic_header_content">
+                <h1 id="topic_header_text">System requirements</h1>
+
+                <div id="topic_breadcrumb">
+                    <a href="GettingStarted.html">Getting Started</a> &rsaquo;&rsaquo; </div>
+            </div>
+            <div id="topic_header_nav">
+                <a href="GettingStarted.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+
+                <a href="GettingStarted.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+
+                <a href="Installationofwebpanel.html"><img src="img/arrow_right.png" alt="Next"/></a>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="topic_content">
+
+            <p></p>
+            <h1 class="rvps5"><span class="rvts0"><span class="rvts13">System requirements:</span></span></h1>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps3"><span class="rvts8">This install manual is based on a Debian Linux 7 (Wheezy) point of view, but can also be used as guidelines for Windows &amp; Macintosh systems. GNURender software consists mainly out of 2 parts, the web panel and one or multiple render nodes. The web panel part is coded in PHP and uses a MySQL database for data storage. The node is coded in C# and compiled with MONO and therefore (theoretically) should run on Linux, Windows &amp; OSX.</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps3"><span class="rvts8">The whole package is developed on Debian Linux, but the nodes are currently tested</span></p>
+            <p class="rvps3"><span class="rvts8">on both Debian &amp; Windows 7.</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <h4 class="rvps6"><span class="rvts0"><span class="rvts14">Webpanel:</span></span></h4>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside; list-style-type: disc;">
+                <li class="rvps3"><span class="rvts8">Apache2</span></li>
+                <li class="rvps3"><span class="rvts8">PHP5</span></li>
+                <li class="rvps3"><span class="rvts8">MySQL</span></li>
+            </ul>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps3"><span class="rvts8">From this point we assume that you already have a working LAMPP stack, if not there are plenty guides available on the internet to accomplish this. The web panel needs PHP extensions MySQL and MySQLi to be enabled. Keep in mind that each node needs a direct connection to the database server. Therefore MySQL needs to allow incoming connections from local host and PC's other then local host.</span></p>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <h4 class="rvps6"><span class="rvts0"><span class="rvts14">Node:</span></span></h4>
+            <p class="rvps3"><span class="rvts8"><br/></span></p>
+            <p class="rvps3"><span class="rvts8">Packages needs to be installed on system:</span></p>
+            <ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside; list-style-type: disc;">
+                <li class="rvps3"><span class="rvts8">MONO</span></li>
+                <li class="rvps3"><span class="rvts8">unzip</span></li>
+                <li class="rvps3"><span class="rvts8">ffmpeg</span></li>
+            </ul>
+            <p></p>
+            <p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com/create-epub-ebooks">Generate EPub eBooks with ease</a></p>
+        </div>
+
+        <div id="topic_footer">
+
+            <div id="topic_footer_content">
+                Copyright &copy; 2014&reg;  by GNURender. All Rights Reserved.</div>
+        </div>
+    </body>
+
+</html>
+

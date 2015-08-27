@@ -1,0 +1,12 @@
+C:\Users\Bastiaan\Desktop\src\node\obj\x86\Debug\node.csprojResolveAssemblyReference.cache
+C:\Users\Bastiaan\Desktop\src\node\bin\Debug\nodewin.exe
+C:\Users\Bastiaan\Desktop\src\node\bin\Debug\nodewin.pdb
+C:\Users\Bastiaan\Desktop\src\node\bin\Debug\mysql.data.dll
+C:\Users\Bastiaan\Desktop\src\node\obj\x86\Debug\nodewin.exe
+C:\Users\Bastiaan\Desktop\src\node\obj\x86\Debug\nodewin.pdb
+C:\Users\Bastiaan\Desktop\src\node\bin\Debug\nodewin.exe.config
+C:\Users\BW\Desktop\GNURender2\GNU Render Node 2\node\bin\Debug\node.exe.config
+C:\Users\BW\Desktop\GNURender2\GNU Render Node 2\node\bin\Debug\node.exe
+C:\Users\BW\Desktop\GNURender2\GNU Render Node 2\node\bin\Debug\node.pdb
+C:\Users\BW\Desktop\GNURender2\GNU Render Node 2\node\obj\x86\Debug\node.exe
+C:\Users\BW\Desktop\GNURender2\GNU Render Node 2\node\obj\x86\Debug\node.pdb
