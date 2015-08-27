@@ -11,6 +11,7 @@ require_once("includes/class.movies.php");
 require_once("includes/class.user.php");
 require_once("includes/class.logbook.php");
 require_once("includes/class.db.php");
+require_once("includes/class.debug.php");
 require_once("includes/class.settings.php");
 require_once("includes/class.screen.php");
 require_once("includes/class.trigger.php");

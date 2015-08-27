@@ -148,6 +148,8 @@ class XMLRPC {
     public function getAuth() {
         global $input;
 
+	Debug::Write("Test");
+
         // basic auth
         $nodeid = $this->IsValidNode($input['authkey']);
         $this->addValue('authenticated', ($nodeid ? "true" : "false"));
