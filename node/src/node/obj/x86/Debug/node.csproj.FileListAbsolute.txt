@@ -10,3 +10,9 @@ C:\Users\BW\Desktop\GNURender2\GNU Render Node 2\node\bin\Debug\node.exe
 C:\Users\BW\Desktop\GNURender2\GNU Render Node 2\node\bin\Debug\node.pdb
 C:\Users\BW\Desktop\GNURender2\GNU Render Node 2\node\obj\x86\Debug\node.exe
 C:\Users\BW\Desktop\GNURender2\GNU Render Node 2\node\obj\x86\Debug\node.pdb
+C:\Users\BW\Documents\GitHub\GNURender\node\src\node\bin\Debug\node.exe.config
+C:\Users\BW\Documents\GitHub\GNURender\node\src\node\obj\x86\Debug\node.exe
+C:\Users\BW\Documents\GitHub\GNURender\node\src\node\obj\x86\Debug\node.pdb
+C:\Users\BW\Documents\GitHub\GNURender\node\src\node\bin\Debug\node.exe
+C:\Users\BW\Documents\GitHub\GNURender\node\src\node\bin\Debug\node.pdb
+C:\Users\BW\Documents\GitHub\GNURender\node\src\node\obj\x86\Debug\node.csprojResolveAssemblyReference.cache

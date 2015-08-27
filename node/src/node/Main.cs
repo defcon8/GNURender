@@ -4,13 +4,10 @@ using System.IO;
 using System.Diagnostics;
 using System.Threading;
 using System.Reflection;
-using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 
 public class Node
 {
-    public static MySqlDataReader Reader = null;
-    public static MySqlCommand command;
 
     public enum TaskState : int
     {
@@ -202,29 +199,31 @@ public class Node
 
     private static void MergeFrames(Dictionary<string, string> taskdetails)
     {
-        GetResourcesFramesMerge(Convert.ToInt32(taskdetails["projid"]));
-        string parameters = taskdetails["parameters"].Replace("{inputfiles}", "resources" + Config.Instance.Slash() + "frame-%04d.png");
-        parameters = taskdetails["parameters"].Replace("{outputfile}", "output" + Config.Instance.Slash() + taskdetails["projid"] + ".avi");
+        // BW TODO FIX
 
-        //Start render process
-        Console.WriteLine(DateTime.Now + ": Starting ffmpeg..");
-        ProcessStartInfo ps = new ProcessStartInfo(taskdetails["application"], taskdetails["parameters"]);
-        ps.UseShellExecute = false;
-        ps.RedirectStandardOutput = true;
-        ps.RedirectStandardError = true;
-        string output;
-        string error;
-        using (Process p = Process.Start(ps))
-        {
-            output = MySqlHelper.EscapeString(p.StandardOutput.ReadToEnd());
-            error = MySqlHelper.EscapeString(p.StandardError.ReadToEnd());
-            p.WaitForExit();
-            p.Close();
-        }
-        // Save data
-        Console.WriteLine(DateTime.Now + ": Proccess ffmpeg finished.\n");
-        string renderedfile = "output" + Config.Instance.Slash() + taskdetails["projid"] + ".avi";
-        //TODO : SaveTaskData(newtask.taskid, renderedfile, output + error);
+        //GetResourcesFramesMerge(Convert.ToInt32(taskdetails["projid"]));
+        //string parameters = taskdetails["parameters"].Replace("{inputfiles}", "resources" + Config.Instance.Slash() + "frame-%04d.png");
+        //parameters = taskdetails["parameters"].Replace("{outputfile}", "output" + Config.Instance.Slash() + taskdetails["projid"] + ".avi");
+
+        ////Start render process
+        //Console.WriteLine(DateTime.Now + ": Starting ffmpeg..");
+        //ProcessStartInfo ps = new ProcessStartInfo(taskdetails["application"], taskdetails["parameters"]);
+        //ps.UseShellExecute = false;
+        //ps.RedirectStandardOutput = true;
+        //ps.RedirectStandardError = true;
+        //string output;
+        //string error;
+        //using (Process p = Process.Start(ps))
+        //{
+        //    output = MySqlHelper.EscapeString(p.StandardOutput.ReadToEnd());
+        //    error = MySqlHelper.EscapeString(p.StandardError.ReadToEnd());
+        //    p.WaitForExit();
+        //    p.Close();
+        //}
+        //// Save data
+        //Console.WriteLine(DateTime.Now + ": Proccess ffmpeg finished.\n");
+        //string renderedfile = "output" + Config.Instance.Slash() + taskdetails["projid"] + ".avi";
+        ////TODO : SaveTaskData(newtask.taskid, renderedfile, output + error);
     }
 
     private static void RenderFrame(Dictionary<string, string> taskdetails)
@@ -271,7 +270,7 @@ public class Node
         string output = "";
         using (Process p = Process.Start(ps))
         {
-            output = MySqlHelper.EscapeString(p.StandardOutput.ReadToEnd());
+            output = Uri.EscapeUriString(p.StandardOutput.ReadToEnd());
             p.WaitForExit();
             p.Close();
         }
